@@ -23,7 +23,7 @@ jobs:
         run: pip install west
 
       - name: Initialize west
-        run: west init -l app && west update
+        run: west init -l zmk/app && west update
 
       - name: Export Zephyr CMake package
         run: west zephyr-export
