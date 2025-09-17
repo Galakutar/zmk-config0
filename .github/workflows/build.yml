@@ -32,3 +32,8 @@ jobs:
         run: |
           west build -s zmk/app -d build/left -- -DSHIELD=OnCoroCoro
 
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: firmware
+          path: build/left/zephyr/zmk.uf2
